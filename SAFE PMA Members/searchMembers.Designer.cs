@@ -28,12 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "searchMembers";
+            SearchLastNameLabel = new Label();
+            SearchLastNameTextBox = new TextBox();
+            SearchReferralButton = new Button();
+            SearchMembersSearchButton = new Button();
+            SearchMemberListBox = new ListBox();
+            SuspendLayout();
+            // 
+            // SearchLastNameLabel
+            // 
+            SearchLastNameLabel.AutoSize = true;
+            SearchLastNameLabel.Location = new Point(12, 27);
+            SearchLastNameLabel.Name = "SearchLastNameLabel";
+            SearchLastNameLabel.Size = new Size(63, 15);
+            SearchLastNameLabel.TabIndex = 0;
+            SearchLastNameLabel.Text = "Last Name";
+            // 
+            // SearchLastNameTextBox
+            // 
+            SearchLastNameTextBox.Location = new Point(81, 24);
+            SearchLastNameTextBox.Name = "SearchLastNameTextBox";
+            SearchLastNameTextBox.Size = new Size(167, 23);
+            SearchLastNameTextBox.TabIndex = 1;
+            // 
+            // SearchReferralButton
+            // 
+            SearchReferralButton.Location = new Point(224, 408);
+            SearchReferralButton.Name = "SearchReferralButton";
+            SearchReferralButton.Size = new Size(142, 23);
+            SearchReferralButton.TabIndex = 3;
+            SearchReferralButton.Text = "Select Referral";
+            SearchReferralButton.UseVisualStyleBackColor = true;
+            SearchReferralButton.Click += SearchReferralButton_Click;
+            // 
+            // SearchMembersSearchButton
+            // 
+            SearchMembersSearchButton.Location = new Point(254, 23);
+            SearchMembersSearchButton.Name = "SearchMembersSearchButton";
+            SearchMembersSearchButton.Size = new Size(112, 23);
+            SearchMembersSearchButton.TabIndex = 4;
+            SearchMembersSearchButton.Text = "Search";
+            SearchMembersSearchButton.UseVisualStyleBackColor = true;
+            SearchMembersSearchButton.Click += SearchMembersSearchButton_Click;
+            // 
+            // SearchMemberListBox
+            // 
+            SearchMemberListBox.FormattingEnabled = true;
+            SearchMemberListBox.ItemHeight = 15;
+            SearchMemberListBox.Location = new Point(12, 53);
+            SearchMemberListBox.Name = "SearchMemberListBox";
+            SearchMemberListBox.Size = new Size(354, 349);
+            SearchMemberListBox.TabIndex = 5;
+            // 
+            // searchMembers
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(378, 450);
+            Controls.Add(SearchMemberListBox);
+            Controls.Add(SearchMembersSearchButton);
+            Controls.Add(SearchReferralButton);
+            Controls.Add(SearchLastNameTextBox);
+            Controls.Add(SearchLastNameLabel);
+            Name = "searchMembers";
+            Text = "searchMembers";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label SearchLastNameLabel;
+        private TextBox SearchLastNameTextBox;
+        private Button SearchReferralButton;
+        private Button SearchMembersSearchButton;
+        private ListBox SearchMemberListBox;
     }
 }

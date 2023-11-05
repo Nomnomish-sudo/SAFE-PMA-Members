@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace SAFE_PMA_Members
 {
+    public class ComboItem
+    {
+        public int ID { get; set; }
+        public string Text { get; set; }
+    }
     public class Member
     {
         public  int id { get; set; }
@@ -20,6 +25,8 @@ namespace SAFE_PMA_Members
         public int ZipCode { get; set; }
         public int CurrentBalance { get; set; }
         public string LastBalUpdate { get; set; }
+        public int MemberStatus {  get; set; }
+        public int MembershipID {  get; set; }
         public string DisplayInfo
         {
             get

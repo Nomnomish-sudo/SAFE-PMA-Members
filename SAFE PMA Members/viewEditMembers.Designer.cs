@@ -55,6 +55,12 @@
             editLastBalanceLabel = new Label();
             editBalanceLabel = new Label();
             editReferralIDLabel = new Label();
+            memberReferralLabel = new Label();
+            referralsListbox = new ListBox();
+            membershipIDLabel = new Label();
+            memberIDLabel = new Label();
+            statusLabel = new Label();
+            editMemberStatusComboBox = new ComboBox();
             SuspendLayout();
             // 
             // membersListbox
@@ -63,7 +69,7 @@
             membersListbox.ItemHeight = 15;
             membersListbox.Location = new Point(12, 102);
             membersListbox.Name = "membersListbox";
-            membersListbox.Size = new Size(277, 334);
+            membersListbox.Size = new Size(277, 124);
             membersListbox.TabIndex = 0;
             membersListbox.SelectedIndexChanged += membersListbox_SelectedIndexChanged;
             // 
@@ -73,6 +79,7 @@
             LastNameTextbox.Name = "LastNameTextbox";
             LastNameTextbox.Size = new Size(171, 23);
             LastNameTextbox.TabIndex = 1;
+            LastNameTextbox.KeyPress += LastNameTextbox_KeyPress;
             // 
             // LastNameLabel
             // 
@@ -132,11 +139,11 @@
             // editReferralEmailLabel
             // 
             editReferralEmailLabel.AutoSize = true;
-            editReferralEmailLabel.Location = new Point(337, 149);
+            editReferralEmailLabel.Location = new Point(331, 149);
             editReferralEmailLabel.Name = "editReferralEmailLabel";
-            editReferralEmailLabel.Size = new Size(61, 15);
+            editReferralEmailLabel.Size = new Size(67, 15);
             editReferralEmailLabel.TabIndex = 8;
-            editReferralEmailLabel.Text = "Referral ID";
+            editReferralEmailLabel.Text = "Referred by";
             // 
             // editStreetAddressLabel
             // 
@@ -248,7 +255,7 @@
             // 
             // updateMemberButton
             // 
-            updateMemberButton.Location = new Point(596, 378);
+            updateMemberButton.Location = new Point(596, 426);
             updateMemberButton.Name = "updateMemberButton";
             updateMemberButton.Size = new Size(75, 23);
             updateMemberButton.TabIndex = 24;
@@ -283,11 +290,70 @@
             editReferralIDLabel.TabIndex = 27;
             editReferralIDLabel.Text = "Select Someone";
             // 
+            // memberReferralLabel
+            // 
+            memberReferralLabel.AutoSize = true;
+            memberReferralLabel.Location = new Point(13, 240);
+            memberReferralLabel.Name = "memberReferralLabel";
+            memberReferralLabel.Size = new Size(100, 15);
+            memberReferralLabel.TabIndex = 28;
+            memberReferralLabel.Text = "Member Referrals";
+            // 
+            // referralsListbox
+            // 
+            referralsListbox.FormattingEnabled = true;
+            referralsListbox.ItemHeight = 15;
+            referralsListbox.Location = new Point(12, 263);
+            referralsListbox.Name = "referralsListbox";
+            referralsListbox.Size = new Size(277, 169);
+            referralsListbox.TabIndex = 29;
+            // 
+            // membershipIDLabel
+            // 
+            membershipIDLabel.AutoSize = true;
+            membershipIDLabel.Location = new Point(310, 369);
+            membershipIDLabel.Name = "membershipIDLabel";
+            membershipIDLabel.Size = new Size(88, 15);
+            membershipIDLabel.TabIndex = 30;
+            membershipIDLabel.Text = "Membership ID";
+            // 
+            // memberIDLabel
+            // 
+            memberIDLabel.AutoSize = true;
+            memberIDLabel.Location = new Point(417, 369);
+            memberIDLabel.Name = "memberIDLabel";
+            memberIDLabel.Size = new Size(91, 15);
+            memberIDLabel.TabIndex = 31;
+            memberIDLabel.Text = "Select Someone";
+            // 
+            // statusLabel
+            // 
+            statusLabel.AutoSize = true;
+            statusLabel.Location = new Point(356, 394);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new Size(42, 15);
+            statusLabel.TabIndex = 32;
+            statusLabel.Text = "Status:";
+            // 
+            // editMemberStatusComboBox
+            // 
+            editMemberStatusComboBox.FormattingEnabled = true;
+            editMemberStatusComboBox.Location = new Point(417, 387);
+            editMemberStatusComboBox.Name = "editMemberStatusComboBox";
+            editMemberStatusComboBox.Size = new Size(254, 23);
+            editMemberStatusComboBox.TabIndex = 33;
+            // 
             // viewEditMembers
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(690, 450);
+            ClientSize = new Size(690, 461);
+            Controls.Add(editMemberStatusComboBox);
+            Controls.Add(statusLabel);
+            Controls.Add(memberIDLabel);
+            Controls.Add(membershipIDLabel);
+            Controls.Add(referralsListbox);
+            Controls.Add(memberReferralLabel);
             Controls.Add(editReferralIDLabel);
             Controls.Add(editBalanceLabel);
             Controls.Add(editLastBalanceLabel);
@@ -350,5 +416,11 @@
         private Label editLastBalanceLabel;
         private Label editBalanceLabel;
         private Label editReferralIDLabel;
+        private Label memberReferralLabel;
+        private ListBox referralsListbox;
+        private Label membershipIDLabel;
+        private Label memberIDLabel;
+        private Label statusLabel;
+        private ComboBox editMemberStatusComboBox;
     }
 }
