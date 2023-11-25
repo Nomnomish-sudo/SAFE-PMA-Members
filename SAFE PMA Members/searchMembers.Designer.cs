@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(searchMembers));
             SearchLastNameLabel = new Label();
             SearchLastNameTextBox = new TextBox();
             SearchReferralButton = new Button();
@@ -50,6 +51,7 @@
             SearchLastNameTextBox.Name = "SearchLastNameTextBox";
             SearchLastNameTextBox.Size = new Size(167, 23);
             SearchLastNameTextBox.TabIndex = 1;
+            SearchLastNameTextBox.KeyPress += SearchLastNameTextBox_KeyPress;
             // 
             // SearchReferralButton
             // 
@@ -90,8 +92,9 @@
             Controls.Add(SearchReferralButton);
             Controls.Add(SearchLastNameTextBox);
             Controls.Add(SearchLastNameLabel);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "searchMembers";
-            Text = "searchMembers";
+            Text = "Search Members";
             ResumeLayout(false);
             PerformLayout();
         }

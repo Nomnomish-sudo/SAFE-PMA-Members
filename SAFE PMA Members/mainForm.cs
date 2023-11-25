@@ -18,5 +18,18 @@ namespace SAFE_PMA_Members
             addMemberForm form4 = new addMemberForm();
             form4.ShowDialog();
         }
+
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+            DataAccess db = new DataAccess();
+            string[] backup = db.BackupList();
+            db.FileAccess(backup);
+        }
+
+        private void addAdminButton_Click(object sender, EventArgs e)
+        {
+            AdminForm adminForm = new AdminForm();
+            adminForm.ShowDialog();
+        }
     }
 }
